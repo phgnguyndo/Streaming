@@ -35,7 +35,7 @@ const OverView = () => {
         <div
           style={{
             background: colorBgContainer,
-            minHeight: "75vh",
+            minHeight: "50vh",
             padding: 24,
             borderRadius: borderRadiusLG,
           }}
