@@ -1,16 +1,21 @@
-import { Box } from "@chakra-ui/react";
+import React from "react";
 import Home from "./Pages/Home";
-import VideoStreaming from "./Components/VideoStreaming";
-import Layout from "./Components/OverView.js";
-import OverView from "./Components/OverView.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./Pages/Login";
+
 
 function App() {
+  
   return (
-    <Box
-    >
-      <OverView></OverView>
-      {/* <VideoStreaming></VideoStreaming> */}
-    </Box>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Login/>} />
+        <Route path="/home" element={<Home/>} />
+        <Route path="/login" element={<Login/>} />
+        {/* <Route path="/register" element={<Register/>} /> */}
+        <Route path="/*" element={<div>404 not found</div>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
