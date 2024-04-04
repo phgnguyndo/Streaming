@@ -73,22 +73,24 @@ const OverView = () => {
         <div
           style={{
             background: colorBgContainer,
-            minHeight: "75vh",
+            minHeight: "80vh",
             padding: 0,
             borderRadius: borderRadiusLG,
           }}
         >
           <Box
-            width={"70%"}
-            height={"75vh"}
+          position={"relative"}
+            width={"80%"}
+            height={"80vh"}
             bg={"beige"}
             float={"left"}
-            borderLeftRadius={"10px"}
+            left={"10%"}
+            borderRadius={"10px"}
             overflow={"hidden"}
           >
             <VideoStreaming />
           </Box>
-          <Box
+          {/* <Box
             width={"30%"}
             height={"75vh"}
             bg={"bisque"}
@@ -98,11 +100,11 @@ const OverView = () => {
             <Box position={"relative"} left={"25%"} top={"5%"}>
               <Connect />
             </Box>
-          </Box>
+          </Box> */}
         </div>
       </Content>
       <Footer style={{ textAlign: "center" }}>
-        Ant Design ©{new Date().getFullYear()} Created by Ant UED
+        Created By Group NCKH {new Date().getFullYear()} 
       </Footer>
     </Layout>
   );

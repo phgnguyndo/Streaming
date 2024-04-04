@@ -1,17 +1,17 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "http://192.168.163.37:8888",
+  baseURL: "http://192.168.95.37:8888",
   headers: {
     "Content-Type": "application/json",
   },
 });
-export const axiosFormData= axios.create({
-  baseURL: 'https://localhost:7278/api',
-  headers: {
-      'Content-Type': 'multipart/form-data', // Thay đổi content type cho FormData
-  },
-});
+// export const axiosFormData= axios.create({
+//   baseURL: 'https://localhost:7278/api',
+//   headers: {
+//       'Content-Type': 'multipart/form-data', // Thay đổi content type cho FormData
+//   },
+// });
 // Add a request interceptor
 axiosClient.interceptors.request.use(
   function (config) {

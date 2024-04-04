@@ -1,46 +1,37 @@
 import React, { useState } from "react";
 import { PoweroffOutlined } from "@ant-design/icons";
 import { Button, Flex } from "antd";
+import axiosClient from "../api/axiosClient";
+import ConnectAPI from "../api/connectAPI";
 
 const Connect = () => {
-  const [loadings, setLoadings] = useState([]);
-  const enterLoading = (index) => {
-    setLoadings((prevLoadings) => {
-      const newLoadings = [...prevLoadings];
-      newLoadings[index] = true;
-      return newLoadings;
-    });
-    setTimeout(() => {
-      setLoadings((prevLoadings) => {
-        const newLoadings = [...prevLoadings];
-        newLoadings[index] = false;
-        return newLoadings;
-      });
-    }, 6000);
+  const handleConnect = async () => {
+    
   };
+
+  // const handleDisConnect = async () => {
+  //   const response = await ConnectAPI.disconnect();
+  //   return response;
+  // };
   return (
     <Flex gap="small" vertical>
       <Flex gap="small" wrap="wrap">
         <Button
           type="primary"
+          onClick={handleConnect}
           style={{
             background: "#56C222",
-            // hover: {
-            //   background: "#1A73E8",
-            // },
           }}
         >
-          {/* loading={loadings[0]} onClick={() => enterLoading(0)}> */}
           Connect
         </Button>
         <Button
+          // onClick={handleDisConnect}
           type="primary"
           icon={<PoweroffOutlined />}
-          style={{background:"#FF010B"}}
-          // loading={loadings[1]}
-          // onClick={() => enterLoading(1)}
+          style={{ background: "#FF010B" }}
         >
-          Click me!
+          Disconnect
         </Button>
       </Flex>
     </Flex>
